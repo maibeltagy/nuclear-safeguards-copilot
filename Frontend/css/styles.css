@@ -1,0 +1,54 @@
+:root {
+  --iaea-blue: #0b3d91;
+  --iaea-teal: #0f766e;
+  --surface: #f7f9fc;
+}
+
+body {
+  background: var(--surface);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, var(--iaea-blue), #145da0 45%, var(--iaea-teal));
+}
+
+.status-pill {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  padding: 0.45rem 1rem;
+  font-size: 0.9rem;
+}
+
+.chat-card,
+.answer-card,
+.sources-card {
+  border-radius: 1rem;
+}
+
+.answer-body {
+  white-space: pre-wrap;
+  line-height: 1.65;
+  color: #1f2937;
+}
+
+.source-item {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.85rem;
+  padding: 1rem;
+  background: #fff;
+}
+
+.source-score {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  color: var(--iaea-teal);
+}
+
+.source-excerpt {
+  font-size: 0.92rem;
+  color: #4b5563;
+  margin-top: 0.5rem;
+}

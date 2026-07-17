@@ -1,0 +1,56 @@
+# Nuclear Safeguards Copilot � Application Settings
+# Change values here without modifying code.
+
+project:
+  name: "Nuclear Safeguards Copilot"
+  version: "0.1.0-mvp"
+
+paths:
+  documents_dir: "Data/documents"
+  index_dir: "Data/index"
+  faiss_index_file: "Data/index/faiss.index"
+  chunks_metadata_file: "Data/index/chunks.json"
+
+chunking:
+  max_words: 350
+  min_words: 40
+  overlap_sentences: 1
+
+retrieval:
+  top_k: 8
+  max_context_chunks: 5
+  word_budget: 1200
+  min_score_ratio: 0.35
+  min_absolute_score: 0.15
+  max_chunks_per_document: 2
+
+embedding:
+  model_name: "all-MiniLM-L6-v2"
+  normalize: true
+  batch_size: 32
+
+llm:
+  provider: "openai"   # openai | gemini | ollama
+
+  temperature: 0.1
+  max_tokens: 1024
+
+  openai:
+    api_key_env: "OPENROUTER_API_KEY"
+    model: "openrouter/free"
+    base_url: "https://openrouter.ai/api/v1"
+
+  gemini:
+    api_key_env: "GEMINI_API_KEY"
+    model: "models/gemini-3.5-flash"
+
+  ollama:
+    host: "http://127.0.0.1:11434"
+    model: "mistral"
+
+    
+server:
+  host: "127.0.0.1"
+  port: 8000
+  cors_origins:
+    - "*"
